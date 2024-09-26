@@ -15,8 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
+# inlude path to playground.urls
+# this will include all the urls in playground.urls
+# to the main url configuration
+# so that the views in playground.urls can be accessed
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('playground/', include('playground.urls'))
 ]

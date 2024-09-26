@@ -1,0 +1,18 @@
+
+    <style>
+      .container {
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello</h1>
+      <p>This is some random stuff inside the div.</p>
+      <p>It's almost like a password generator.</p>
+      {% if random_string %}
+        <p>{{ random_string }}</p>
+      {% endif %}
+    </div>
+  </body>
