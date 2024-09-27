@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from debug_toolbar.toolbar import debug_toolbar_urls
 
 # inlude path to playground.urls
 # this will include all the urls in playground.urls
@@ -24,4 +25,4 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls'))
-]
+]  + debug_toolbar_urls()
