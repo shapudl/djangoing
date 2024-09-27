@@ -1,4 +1,8 @@
-
+<!-- FILEPATH: /home/tena/Desktop/glab/djangoing/playground/templates/say_random_stuff.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Say Random Stuff</title>
     <style>
       .container {
         text-align: center;
@@ -12,7 +16,12 @@
       <p>This is some random stuff inside the div.</p>
       <p>It's almost like a password generator.</p>
       {% if random_string %}
-        <p>{{ random_string }}</p>
+      <p id="random-string">{{ random_string }}</p>
       {% endif %}
+      <button hx-get="/playground/hello/random" hx-target="#random-string">
+        Generate Random String
+      </button>
     </div>
+    <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
   </body>
+</html>
